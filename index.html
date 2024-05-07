@@ -1,21 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
     <title>PIP-Boy</title>
 </head>
+
 <body>
     <div id="app">
         <div id="main-container">
-            <h1></h1>
+            <div class="stat-picker col">
 
+
+                <div class="points col space-between">
+                    <div class="w-50">
+                        <label for="total-points">Total Points</label>
+                        <input id="total-points" value="0">
+                    </div>
+                    
+                    <div class="w-50">
+                        <label for="available-points">Available Points</label>
+                        <input disabled id="available-points" value="0">
+                    </div>
+                </div>
+
+                <div class="row space-between">
+
+                    <div class="w-50 stats">
+                        <div class="stat row">
+                            <button id="strength-minus" class="stat-adjust">-</button>
+                            <div class="row stat-display">
+                                <div class="stat-name mr-1">Strength</div>
+                                <input disabled id="strength-value" class="stat-value" min="10" max="1" value="1"
+                                    type="number" />
+                            </div>
+                            <button id="strength-plus" class="stat-adjust">+</button>
+                        </div>
+                        <div class="stat row">
+                            <button id="perception-minus" class="stat-adjust">-</button>
+                            <div class="row stat-display">
+                                <div class="stat-name mr-1">Perception</div>
+                                <input disabled id="perception-value" class="stat-value" min="10" max="1" value="1"
+                                    type="number" />
+                            </div>
+                            <button id="perception-plus" class="stat-adjust">+</button>
+                        </div>
+                        <div class="stat row">
+                            <button id="endurance-minus" class="stat-adjust">-</button>
+                            <div class="row stat-display">
+                                <div class="stat-name mr-1">Endurance</div>
+                                <input disabled id="endurance-value" class="stat-value" min="10" max="1" value="1"
+                                    type="number" />
+                            </div>
+                            <button id="endurance-plus" class="stat-adjust">+</button>
+                        </div>
+                        <div class="stat row">
+                            <button id="charisma-minus" class="stat-adjust">-</button>
+                            <div class="row stat-display">
+                                <div class="stat-name mr-1">Charisma</div>
+                                <input disabled id="charisma-value" class="stat-value" min="10" max="1" value="1"
+                                    type="number" />
+                            </div>
+                            <button id="charisma-plus" class="stat-adjust">+</button>
+                        </div>
+                        <div class="stat row">
+                            <button id="intelligence-minus" class="stat-adjust">-</button>
+                            <div class="row stat-display">
+                                <div class="stat-name mr-1">Intelligence</div>
+                                <input disabled id="intelligence-value" class="stat-value" min="10" max="1" value="1"
+                                    type="number" />
+                            </div>
+                            <button id="intelligence-plus" class="stat-adjust">+</button>
+                        </div>
+                        <div class="stat row">
+                            <button id="agility-minus" class="stat-adjust">-</button>
+                            <div class="row stat-display">
+                                <div class="stat-name mr-1">Agility</div>
+                                <input disabled id="agility-value" class="stat-value" min="10" max="1" value="1"
+                                    type="number" />
+                            </div>
+                            <button id="agility-plus" class="stat-adjust">+</button>
+                        </div>
+                        <div class="stat row">
+                            <button id="luck-minus" class="stat-adjust">-</button>
+                            <div class="row stat-display">
+                                <div class="stat-name mr-1">Luck</div>
+                                <input disabled id="luck-value" class="stat-value" min="10" max="1" value="1"
+                                    type="number" />
+                            </div>
+                            <button id="luck-plus" class="stat-adjust">+</button>
+                        </div>
+
+                    </div>
+                    <div class="w-50 description"> Strength is...</div>
+                </div>
+            </div>
         </div>
     </div>
-    
-    
+    <script src="script.js"></script>
 </body>
+
 </html>

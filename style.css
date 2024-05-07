@@ -1,3 +1,97 @@
+@font-face {
+  font-family: "Overseer";
+  src: url("assets/fonts/overseer/Overseer.otf") format("truetype");
+}
+
 body {
-    background-color: black;
+  font-family: "Overseer", sans-serif;
+
+  background-color: black;
+}
+
+:root {
+  --primary-color: #6fef5e;
+  --background-color: black;
+}
+
+input {
+  all: unset;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.col {
+  display: flex;
+  flex-flow: column;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.stat-picker {
+  display: flex;
+  margin: 5rem;
+  justify-content: space-between;
+  color: var(--primary-color);
+
+  font-size: 2rem;
+}
+
+.stat {
+  /* justify-content: space-between; */
+  text-align: left;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+}
+
+.stat-value {
+  /* all: unset; */
+
+  background: transparent;
+  color: var(--primary-color);
+}
+
+.points {
+  margin-bottom: 4rem;
+  justify-content: space-between;
+}
+
+.stat-display {
+  width: 12rem;
+}
+
+.total-points {
+  /* background-color: darkgray */
+}
+
+.stat-adjust {
+  margin-right: 1rem;
+  margin-left: 1rem;
+
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border: none;
+
+  font-size: 2rem;
+}
+
+.stat-name {
+  width: 8rem;
+}
+
+.w-50 {
+  width: 50%;
 }
