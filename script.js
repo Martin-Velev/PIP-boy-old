@@ -4,6 +4,7 @@ let STARTING_VALUE = 1
 let MIN_STAT = 1
 let MAX_STAT = 10
 let DEFAULT_POINTS = 33
+let totalPoints = DEFAULT_POINTS
 let availablePoints = DEFAULT_POINTS
 
 
@@ -17,11 +18,19 @@ let STATS = {
     L: 'Luck'
 }
 
-
+// RESET BUTTON
 resetButton = document.getElementById('reset-button')
 
+// TOTAL POINTS
+let totalPointsElement = document.getElementById('total-points')
+totalPointsElement.value = DEFAULT_POINTS
+
+// AVAILABLE POINTS
+let availablePointsElement = document.getElementById('available-points')
+availablePointsElement.value = availablePoints
+
 function reset() {
-    availablePoints = DEFAULT_POINTS
+    availablePoints = totalPoints
     availablePointsElement.value = availablePoints
     for (let key in STATS) {
         let statName = STATS[key].toLowerCase()
@@ -30,6 +39,22 @@ function reset() {
     }
 }
 resetButton.addEventListener('click', reset)
+
+totalPointsElement = document.getElementById('total-points')
+totalPointsElement.addEventListener('change', function () {
+    let newValue = parseInt(totalPointsElement.value)
+    console.log('changesd', newValue)
+
+    if (newValue < 0) {
+        console.log('wtf')
+        totalPointsElement.value = 0
+    }
+    availablePoints = newValue
+    availablePointsElement.value = availablePoints
+    totalPoints = newValue
+
+    reset()
+})
 
 let statAdjustHandler = function (stat, value) {
     console.log('statAdjustHandler', stat, value)
@@ -60,11 +85,3 @@ for (let key in STATS) {
     // Your code here
 }
 
-
-// TOTAL POINTS
-let totalPointsElement = document.getElementById('total-points')
-totalPointsElement.value = DEFAULT_POINTS
-
-// AVAILABLE POINTS
-let availablePointsElement = document.getElementById('available-points')
-availablePointsElement.value = availablePoints
