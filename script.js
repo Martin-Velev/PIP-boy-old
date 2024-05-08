@@ -43,10 +43,8 @@ resetButton.addEventListener('click', reset)
 totalPointsElement = document.getElementById('total-points')
 totalPointsElement.addEventListener('change', function () {
     let newValue = parseInt(totalPointsElement.value)
-    console.log('changesd', newValue)
 
     if (newValue < 0) {
-        console.log('wtf')
         totalPointsElement.value = 0
     }
     availablePoints = newValue
@@ -57,7 +55,6 @@ totalPointsElement.addEventListener('change', function () {
 })
 
 let statAdjustHandler = function (stat, value) {
-    console.log('statAdjustHandler', stat, value)
     let element = document.getElementById(stat.toLowerCase() + '-value')
     let newValue = parseInt(element.value) + value
     let isOutsideRange = newValue < MIN_STAT || newValue > MAX_STAT
@@ -76,7 +73,6 @@ for (let key in STATS) {
     for (let i = 0; i < 2; i++) {
         let plusMinus = i === 0 ? 'minus' : 'plus'
         let button = document.getElementById(statName + '-' + (plusMinus))
-        console.log(button)
         button.addEventListener('click', function () {
             statAdjustHandler(statName, i === 0 ? -1 : 1)
         })
