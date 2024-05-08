@@ -1,6 +1,6 @@
 console.log('script.js')
 
-let DEFAULT_VALUE = 1
+let STARTING_VALUE = 1
 let MIN_STAT = 1
 let MAX_STAT = 10
 let DEFAULT_POINTS = 33
@@ -17,9 +17,19 @@ let STATS = {
     L: 'Luck'
 }
 
-// 
-let strengthMinusButton = document.getElementById('strength-minus')
-console.log(strengthMinusButton)
+
+resetButton = document.getElementById('reset-button')
+
+function reset() {
+    availablePoints = DEFAULT_POINTS
+    availablePointsElement.value = availablePoints
+    for (let key in STATS) {
+        let statName = STATS[key].toLowerCase()
+        let element = document.getElementById(statName + '-value')
+        element.value = STARTING_VALUE
+    }
+}
+resetButton.addEventListener('click', reset)
 
 let statAdjustHandler = function (stat, value) {
     console.log('statAdjustHandler', stat, value)
@@ -37,7 +47,6 @@ let statAdjustHandler = function (stat, value) {
 
 
 for (let key in STATS) {
-    let stat = key
     let statName = STATS[key].toLowerCase()
     for (let i = 0; i < 2; i++) {
         let plusMinus = i === 0 ? 'minus' : 'plus'

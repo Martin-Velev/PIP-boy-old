@@ -40,6 +40,16 @@ input {
   margin-right: 1rem;
 }
 
+#reset-button {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  /* border: none; */
+  font-size: 2rem;
+  width: 6rem;
+}
+
+
+
 .stat-picker {
   display: flex;
   margin: 5rem;
