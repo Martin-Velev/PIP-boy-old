@@ -1,0 +1,51 @@
+.venv
+.env
+venv
+
+settings-me.yaml
+
+.ruff_cache
+.pytest_cache
+.mypy_cache
+
+# byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# unit tests / coverage reports
+/tests-results.xml
+/.coverage
+/coverage.xml
+/htmlcov/
+
+# build
+dist
+
+# pyenv
+/.python-version
+
+# IDE
+.idea/
+.vscode/
+/.run/
+.fleet/
+
+# macOS
+.DS_Store
+
+# logs
+*.log
+logs
+history
+# thread logs
+thread.txt
+
+
+# Archive
+Archive/
+
+# Notes
+.notes
+
+# Test file
+test.py
