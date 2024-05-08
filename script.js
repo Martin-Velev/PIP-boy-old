@@ -45,7 +45,8 @@ totalPointsElement.addEventListener('change', function () {
     let newValue = parseInt(totalPointsElement.value)
 
     if (newValue < 0) {
-        totalPointsElement.value = 0
+        newValue = 0
+        totalPointsElement.value = newValue
     }
     availablePoints = newValue
     availablePointsElement.value = availablePoints
